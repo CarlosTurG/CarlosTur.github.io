@@ -1,0 +1,173 @@
+body {
+    background: #4CAF50;
+    font-family: 'Calistoga', cursive;
+}
+
+/* CONTENEDOR GRID */
+.container {
+    background-color: rgb(248, 248, 246);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "header header header"
+    "barraNav barraNav barraNav"
+    "personales formacion formacion"
+    "complementaria complementaria complementaria"
+    "experiencia idiomas otros";
+    gap: 5px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 30px;
+}
+
+/* CABECERA DE LA PÁGINA*/
+header {
+    background: #4CAF50;
+    grid-area: header;
+    text-align: center;
+    grid-template-columns: auto 500px 300px;
+    box-shadow: 10px 10px 5px grey;
+    font-size: x-large;
+  
+}
+
+/* CAMBIOS GENERALES EN DIV SECCIONES */
+section {
+    background-color: lightgray;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding-right: 25px;
+  
+}
+section:hover {
+    background-color: orange;
+}
+#personales, #complementaria, #experiencia, #complementaria {
+    margin-left: 25px;
+   
+}
+#formacion, #otros, #complementaria {
+    margin-right: 25px;
+}
+#experiencia, #idiomas, #otros {
+    margin-bottom: 25px;
+}
+
+/* CAMBIOS GENERALES EN LISTAS */
+ul {
+    list-style: none;
+}
+li {
+    margin-bottom: 12px;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.barraNav {
+    grid-area: barraNav;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    background-color: lightgoldenrodyellow;
+    border-top: solid 4px goldenrod;
+    border-bottom: solid 4px goldenrod;
+}
+nav {
+    text-align: center;
+    display: flex;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav li{
+    border-right: solid goldenrod;
+    padding: 10px;
+    margin: 2px; 
+}
+nav li:nth-child(1){
+    border-left: solid goldenrod;
+}
+a {
+    color: black
+}
+nav li:hover {
+    background-color: gold;
+    color: white;
+    border-radius: 10px;
+}
+li a {
+    text-decoration: none;
+}   
+#despl {
+    border: none;
+    display: none;
+}
+/* BARRA DE NAVEGACIÓN-REDES SOCIALES(footer) */
+footer {
+    padding: 10px;
+    display: flex;
+    height: 50px;
+    
+}
+footer div.circle {
+    flex-direction: row;
+    width: 28px;
+    margin-left: 80px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.301);
+    text-align: center;
+    padding: 10px;
+}
+footer div.circle:hover {
+    background-color: blue;
+}
+
+/* DATOS PERSONALES */
+#personales {
+    grid-area: personales;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+#personales img{
+    margin-right: 10px;
+    margin-left: 20px;
+    border-radius: 25px;
+    border: 2px solid white;
+}
+#personales ul {
+    margin-right: 15px;
+}
+
+/* FORMACIÓN ACADÉMICA */
+#formacion {
+    grid-area: formacion;
+}
+
+/* FORMACIÓN COMPLEMENTARIA */
+#complementaria{
+    grid-area: complementaria;
+}
+
+#experiencia {
+    grid-area: experiencia;
+}
+
+#idiomas {
+    grid-area: idiomas;
+} 
+#idiomas li {
+    list-style: circle;
+}
+
+#otros {
+    grid-area: otros;
+}
+#otros li {
+    list-style: circle;
+}
+
+
